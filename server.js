@@ -1,6 +1,12 @@
 const express = require('express');
+const path = require('path');
 
+// initialize express
 const app = express();
+
+// body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
 
 // GET request at root
 app.get('/', (req, res) => {
