@@ -1,5 +1,6 @@
 import express from 'express';
-import path from 'path';
+import mongodb from 'mongodb';
+// import path from 'path';
 
 // initialize express
 const app = express();
@@ -29,7 +30,7 @@ app.delete('/users', (req, res) => {
   res.send('DELETE Working. Deleted user at /users');
 })
 
-``
+  ``
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server running on ${port}`))
